@@ -37,7 +37,7 @@ export interface Faculty{
   password: string;
   TelNo: string;
   MobileNo: string;
-
+//cccc
 
   elementary: Elementary[];
 }

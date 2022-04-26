@@ -1,4 +1,4 @@
-export interface Elementary{
+export interface School{
   nameOfSchool: String;
   course: String;
   fromYear: string;
@@ -6,4 +6,6 @@ export interface Elementary{
   highestLevel:String;
   yearGraduated: String;
   honors: string;
+  type: string;
+  user_id:string;
 }

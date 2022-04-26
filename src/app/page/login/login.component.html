@@ -1,1 +1,33 @@
-<button routerLink="/register">register</button>
+
+<form [formGroup]="form" (submit)="onLogin()">
+
+
+  <mat-form-field class="txtField" appearance="outline">
+    <mat-label>Email</mat-label>
+    <input
+    class="txtInput"
+    matInput
+    formControlName="email" name="email"
+    required email>
+    <mat-error *ngIf="form.get('email').invalid">Please enter a valid email</mat-error>
+
+</mat-form-field><br>
+
+<mat-form-field class="txtField" appearance="outline">
+  <mat-label>password</mat-label>
+  <input class="txtInput"
+   type="password"
+    matInput
+  formControlName="pw"
+   name="pw"
+      required>
+      <mat-error *ngIf="form.get('pw').invalid">Please enter a valid password</mat-error>
+
+</mat-form-field>
+
+
+  <button *ngIf="!isLoading" mat-flat-button color="primary" type="submit">Login</button>
+
+  <button *ngIf="!isLoading" mat-flat-button color="accent" routerLink="/register" >Register</button>
+
+</form>

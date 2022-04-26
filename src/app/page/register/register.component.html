@@ -10,6 +10,22 @@
 
     <mat-card-content>
 
+      <!-- ESIG -->
+    <div style="margin-bottom: 2rem">
+
+      <!-- preview  -->
+      <div class= "sig-preview" *ngIf = "fileTitleProfilePicPrev !== '' && fileTitleProfilePicPrev">
+        <img [src] = "fileTitleProfilePicPrev" >
+      </div>
+
+      <!-- makikita -->
+      <button mat-button type="button" (click)="filePickerESig.click()">Upload your signature</button>
+
+      <!-- invi -->
+      <input type="file" #filePickerESig (change) = "onFilePickedProfilePic($event)" accept="image/png">
+
+    </div>
+
       <mat-form-field appearance="outline">
         <mat-label>Employee Number</mat-label>
 
@@ -41,7 +57,7 @@
         <mat-label>Middle Initial</mat-label>
 
         <input class="txtInput" type="text" matInput
-              formControlName="MI" name="MI"
+              formControlName="MidInit" name="MidInit"
               placeholder="M.I." >
 
       </mat-form-field>
@@ -340,109 +356,11 @@
 
     </mat-card-content>
     <mat-card-actions>
+      <button mat-flat-button color="primary" type="submit">Register</button>
+      <button mat-flat-button color="accent"  routerLink="/login">Back</button>
 
     </mat-card-actions>
   </mat-card>
 
-
-
-  <mat-card>
-
-
-
-
-    <mat-card-header>
-      <mat-card-title>Educational background</mat-card-title>
-    </mat-card-header>
-
-    <mat-card-content>
-
-      <div formArrayName="elemForm">
-        <div *ngFor= "let control of mainForm.controls['elemForm']['controls']; let i = index " [formGroupName]= "i">
-
-          <mat-form-field appearance="outline">
-            <mat-label>Name of School (write in full)</mat-label>
-
-            <input class="txtInput" type="text" matInput
-                  formControlName="nameOfSchool" name="nameOfSchool"
-                  placeholder="Last name" >
-
-          </mat-form-field>
-
-          <mat-form-field appearance="outline">
-            <mat-label>Basic Education/Degree/Course (write in full)</mat-label>
-
-            <input class="txtInput" type="text" matInput
-                  formControlName="course" name="course"
-                  >
-
-          </mat-form-field>
-
-          <mat-form-field appearance="outline">
-            <mat-label>From</mat-label>
-
-            <input class="txtInput" type="text" matInput
-                  formControlName="fromYear" name="fromYear"
-                   >
-
-          </mat-form-field>
-
-          <mat-form-field appearance="outline">
-            <mat-label>To</mat-label>
-
-            <input class="txtInput" type="text" matInput
-                  formControlName="toYear" name="toYear"
-                   >
-
-          </mat-form-field>
-
-          <mat-form-field appearance="outline">
-            <mat-label>Highest Level/Units Earned (if not graduated)</mat-label>
-
-            <input class="txtInput" type="text" matInput
-                  formControlName="highestLevel" name="highestLevel"
-                   >
-
-          </mat-form-field>
-
-          <mat-form-field appearance="outline">
-            <mat-label>Year Graduate</mat-label>
-
-            <input class="txtInput" type="text" matInput
-                  formControlName="yearGraduated" name="yearGraduated"
-                   >
-
-          </mat-form-field>
-
-          <mat-form-field appearance="outline">
-            <mat-label>Scholarship/Academic Honors Received</mat-label>
-
-            <input class="txtInput" type="text" matInput
-                  formControlName="honors" name="honors" ngModel
-                   >
-
-          </mat-form-field>
-
-          <button mat-flat-button color="warn" (click)="removedElemData(i)">Removed</button>
-
-        </div>
-
-      </div>
-
-
-    </mat-card-content>
-
-    <mat-card-actions>
-      <button mat-flat-button color="primary" (click)="addElemData()">Add</button>
-    </mat-card-actions>
-
-
- </mat-card>
-
-
-
-
-
-  <button mat-flat-button color="primary" type="submit">Submit</button>
 </form>
 

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FacultyService } from './Service/faculty.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'FMIS';
+
+
+  constructor(private facultyService: FacultyService ) {
+
+
+    this.facultyService.autoAuthUser();
+
+  }
+
+
+
+
+
 }

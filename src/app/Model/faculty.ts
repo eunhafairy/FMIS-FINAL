@@ -1,6 +1,8 @@
-import { Elementary } from "./elementary";
+
 
 export interface Faculty{
+  id: string;
+  //profilePic: File;
   EmployeeNumber: string;
   LastName: string;
   FirstName: string;
@@ -37,7 +39,7 @@ export interface Faculty{
   password: string;
   TelNo: string;
   MobileNo: string;
-//cccc
-
-  elementary: Elementary[];
+  email:string;
+  altEmail:string;
+//
 }

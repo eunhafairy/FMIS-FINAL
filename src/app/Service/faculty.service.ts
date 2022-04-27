@@ -82,93 +82,92 @@ export class FacultyService implements OnInit{
 
   ){
 
-    const facultyData :Faculty = {
+  //   const facultyData :Faculty = {
 
-      id: null,
-      EmployeeNumber: EmployeeNumber,
-  LastName: LastName,
-  FirstName: FirstName,
-  MI: MI,
-  NameExtention: NameExtention,
-  birthdate: birthdate,
-  age: age,
-  PlaceOfBirth: PlaceOfBirth,
-  gender: gender,
-  CivilStatus: CivilStatus,
-  height: height,
-  weight: weight,
-  BloodType: BloodType,
-  gsis: gsis,
-  pagibig: pagibig,
-  philHealth: philHealth,
-  sss: sss,
-  tin: tin,
-  citizenship: citizenship,
-  r_zipCode: r_zipCode,
-  r_lotNo: r_lotNo,
-  r_street: r_street,
-  r_village: r_village,
-  r_brgy: r_brgy,
-  r_city: r_city,
-  r_province: r_province,
-  p_zipCode: p_zipCode,
-  p_LotNo: p_LotNo,
-  p_street: p_street,
-  p_village: p_village,
-  p_brgy: p_brgy,
-  p_city: p_city,
-  p_province: p_province,
-  password: password,
-  TelNo: TelNo,
-  MobileNo: MobileNo,
-  email:email,
-  altEmail: altEmail
+  //     user_id: null,
+  //     EmployeeNumber: EmployeeNumber,
+  // LastName: LastName,
+  // FirstName: FirstName,
+  // MI: MI,
+  // NameExtention: NameExtention,
+  // birthdate: birthdate,
+  // age: age,
+  // PlaceOfBirth: PlaceOfBirth,
+  // gender: gender,
+  // CivilStatus: CivilStatus,
+  // height: height,
+  // weight: weight,
+  // BloodType: BloodType,
+  // gsis: gsis,
+  // pagibig: pagibig,
+  // philHealth: philHealth,
+  // sss: sss,
+  // tin: tin,
+  // citizenship: citizenship,
+  // r_zipCode: r_zipCode,
+  // r_lotNo: r_lotNo,
+  // r_street: r_street,
+  // r_village: r_village,
+  // r_brgy: r_brgy,
+  // r_city: r_city,
+  // r_province: r_province,
+  // p_zipCode: p_zipCode,
+  // p_LotNo: p_LotNo,
+  // p_street: p_street,
+  // p_village: p_village,
+  // p_brgy: p_brgy,
+  // p_city: p_city,
+  // p_province: p_province,
+  // password: password,
+  // TelNo: TelNo,
+  // MobileNo: MobileNo,
+  // email:email,
+  // altEmail: altEmail
 
 
-    }
-  //  const facultyDataForm = new FormData();
-    //facultyDataForm.append('profilPic', profilePic , profilePic.name);
-    // facultyDataForm.append("emp", EmployeeNumber);
-    // facultyDataForm.append('LastName', LastName);
-    // facultyDataForm.append('FirstName', FirstName);
-    // facultyDataForm.append('MI', MI);
-    // facultyDataForm.append('NameExtention', NameExtention);
-    // facultyDataForm.append('birthdate', birthdate);
-    // facultyDataForm.append('age', age);
-    // facultyDataForm.append('PlaceOfBirth', PlaceOfBirth);
-    // facultyDataForm.append('gender', gender);
-    // facultyDataForm.append('CivilStatus', CivilStatus);
-    // facultyDataForm.append('height', height);
-    // facultyDataForm.append('weight', weight);
-    // facultyDataForm.append('BloodType', BloodType);
-    // facultyDataForm.append('gsis', gsis);
-    // facultyDataForm.append('pagibig', pagibig);
-    // facultyDataForm.append('philHealth', philHealth);
-    // facultyDataForm.append('sss', sss);
-    // facultyDataForm.append('tin', tin);
-    // facultyDataForm.append('citizenship', citizenship);
-    // facultyDataForm.append('r_zipCode', r_zipCode);
-    // facultyDataForm.append('r_lotNo', r_lotNo);
-    // facultyDataForm.append('r_street', r_street);
-    // facultyDataForm.append('r_village', r_village);
-    // facultyDataForm.append('r_brgy', r_brgy);
-    // facultyDataForm.append('r_city', r_city);
-    // facultyDataForm.append('r_province', r_province);
-    // facultyDataForm.append('p_zipCode', p_zipCode);
-    // facultyDataForm.append('p_LotNo', p_LotNo);
-    // facultyDataForm.append('p_street', p_street);
-    // facultyDataForm.append('p_village', p_village);
-    // facultyDataForm.append('p_brgy', p_brgy);
-    // facultyDataForm.append('p_city', p_city);
-    // facultyDataForm.append('p_province', p_province);
-    // facultyDataForm.append('email', email);
-    // facultyDataForm.append('altEmail', altEmail);
-    // facultyDataForm.append('password', password);
-    // facultyDataForm.append('TelNo', TelNo);
-    // facultyDataForm.append('MobileNo', MobileNo);
+  //   }
+  const facultyDataForm = new FormData();
+   // facultyDataForm.append('profilPic', profilePic , profilePic.name);
+    facultyDataForm.append("emp", EmployeeNumber);
+    facultyDataForm.append('LastName', LastName);
+    facultyDataForm.append('FirstName', FirstName);
+    facultyDataForm.append('MI', MI);
+    facultyDataForm.append('NameExtention', NameExtention);
+    facultyDataForm.append('birthdate', birthdate);
+    facultyDataForm.append('age', age);
+    facultyDataForm.append('PlaceOfBirth', PlaceOfBirth);
+    facultyDataForm.append('gender', gender);
+    facultyDataForm.append('CivilStatus', CivilStatus);
+    facultyDataForm.append('height', height);
+    facultyDataForm.append('weight', weight);
+    facultyDataForm.append('BloodType', BloodType);
+    facultyDataForm.append('gsis', gsis);
+    facultyDataForm.append('pagibig', pagibig);
+    facultyDataForm.append('philHealth', philHealth);
+    facultyDataForm.append('sss', sss);
+    facultyDataForm.append('tin', tin);
+    facultyDataForm.append('citizenship', citizenship);
+    facultyDataForm.append('r_zipCode', r_zipCode);
+    facultyDataForm.append('r_lotNo', r_lotNo);
+    facultyDataForm.append('r_street', r_street);
+    facultyDataForm.append('r_village', r_village);
+    facultyDataForm.append('r_brgy', r_brgy);
+    facultyDataForm.append('r_city', r_city);
+    facultyDataForm.append('r_province', r_province);
+    facultyDataForm.append('p_zipCode', p_zipCode);
+    facultyDataForm.append('p_LotNo', p_LotNo);
+    facultyDataForm.append('p_street', p_street);
+    facultyDataForm.append('p_village', p_village);
+    facultyDataForm.append('p_brgy', p_brgy);
+    facultyDataForm.append('p_city', p_city);
+    facultyDataForm.append('p_province', p_province);
+    facultyDataForm.append('email', email);
+    facultyDataForm.append('altEmail', altEmail);
+    facultyDataForm.append('password', password);
+    facultyDataForm.append('TelNo', TelNo);
+    facultyDataForm.append('MobileNo', MobileNo);
 
-    let header = new HttpHeaders()
-    return this.http.post("http://localhost:3000/api/users/register", facultyData)
+    return this.http.post("http://localhost:3000/api/users/register",facultyDataForm )
         .pipe( catchError(this.handleError));
 
   }

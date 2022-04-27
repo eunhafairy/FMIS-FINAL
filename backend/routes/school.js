@@ -1,15 +1,14 @@
+
+// schoolRouter || /routes/school.js
 const express = require('express');
 const School = require('../models/school');
 const router = express.Router();
 const checkAuth = require('../middleware/check-auth');
 
-
 //CREATE SCHOOL INFO
-
-
 router.post("", checkAuth, (req,res,next) =>{
 
-  console.log(req.body)
+  console.log(req.body) // --- null
 
   const school = new School({
     nameOfSchool : req.body.nameOfSchool,
@@ -46,3 +45,11 @@ router.post("", checkAuth, (req,res,next) =>{
 
 
 module.exports = router;
+
+
+
+
+
+
+
+

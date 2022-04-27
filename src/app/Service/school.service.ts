@@ -1,4 +1,4 @@
-import { HttpClient, HttpErrorResponse } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { catchError, Subject, throwError } from 'rxjs';
 import { serializeError } from 'serialize-error';
@@ -35,49 +35,25 @@ private schoolsUpdated = new Subject<{schools: School []}>();
     return this.schoolsUpdated.asObservable();
   }
 
-  //ADD SCHOOL
-  addSchool(
-      nameOfSchool: string,
-      course: string,
-      fromYear: string,
-      toYear: string,
-      highestLevel:string,
-      yearGraduated:string,
-      honors: string,
-      type:string,
-      user_id:string
+  //school.service.ts 
+  addSchool
+    ( nameOfSchool: string,   course: string,  fromYear: string,   toYear: string,
+    highestLevel:string, yearGraduated:string, honors: string,  type:string,  user_id:string ){
 
-  ){
+    //create formdata
 
-    // let reqData = new FormData();
+    let reqData = new FormData();
+    reqData.append("nameOfSchool", nameOfSchool);
+    reqData.append("course", course);
+    reqData.append("fromYear", fromYear);
+    reqData.append("toYear", toYear);
+    reqData.append("highestLevel", highestLevel);
+    reqData.append("yearGraduated", yearGraduated);
+    reqData.append("honors", honors);
+    reqData.append("type", type);
+    reqData.append("user_id", user_id);
 
-    //   reqData.append("nameOfSchool", nameOfSchool);
-    //   reqData.append("course", course);
-    //   reqData.append("fromYear", fromYear);
-    //   reqData.append("toYear", toYear);
-    //   reqData.append("highestLevel", highestLevel);
-    //   reqData.append("yearGraduated", yearGraduated);
-    //   reqData.append("honors", honors);
-    //   reqData.append("type", type);
-    //   reqData.append("user_id", user_id);
-
-    let reqData : any = {
-
-      nameOfSchool:nameOfSchool,
-      course:course,
-      fromYear:fromYear,
-      toYear:toYear,
-      highestLevel:highestLevel,
-      yearGraduated:yearGraduated,
-      honors:honors,
-      type:type,
-      user_id:user_id
-
-
-
-
-    }
-
+    //create post request
     return this.http.post("http://localhost:3000/api/schools", reqData)
     .pipe(catchError(this.handleError));
 

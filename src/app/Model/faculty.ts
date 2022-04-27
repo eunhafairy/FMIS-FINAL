@@ -1,7 +1,7 @@
 
 
 export interface Faculty{
-  id: string;
+  user_id: string;
   //profilePic: File;
   EmployeeNumber: string;
   LastName: string;

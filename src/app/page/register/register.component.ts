@@ -139,9 +139,12 @@ export class RegisterComponent implements OnInit {
 
     ).subscribe(res => {
       console.log(res)
+      window.alert('success');
+
     },
     error=>{
       console.log(error)
+      window.alert('Error! See console'+error);
     });
   }
 
